@@ -15,7 +15,8 @@ The type of time conversion is specified by either passing type='GPS' or type='U
 A list with the correction times to apply to the input file provided.
 
 # Working example
-'''
+``` Python
+
 import numpy as np
 import csv
 import os
@@ -71,5 +72,4 @@ def time_correction(input_file, type='UT1'):
 
     return delta
 
-
-'''
+```
