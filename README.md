@@ -12,7 +12,7 @@ The _time_correction_ function permits to download the correction tables (from [
 The type of time conversion is specified by either passing type='GPS' or type='UT1' to the function. An input file in CSV format with the first column being the fractional julian date form of the epoch of the orbiting satellite is also given (for the UT1 conversions).
 
 # Output
-A list with the correction times to apply to the input file provided.
+A list with the correction times to apply to the input file provided. Note that the $\Delta t$ provided in the case of GPS conversion is only with respect to the TAI system, and not yet GPS, as the assignment requires to only read the data. The careful user must still implement the simple conversion from TAI to GPS.
 
 # Working example
 ``` Python
@@ -72,4 +72,5 @@ def time_correction(input_file, type='UT1'):
 
     return delta
 
+d = time_correction('./orbit.dat', type='UT1')
 ```
