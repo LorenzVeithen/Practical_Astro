@@ -15,7 +15,7 @@ def read_CSV(file):
             data = np.vstack((data, row))
     return data
 
-def time_correction(input_file, output_file, type='UT1'):
+def time_correction(input_file, type='UT1'):
     # Check which files we have
     orbit_data = read_CSV(input_file)
     JD = orbit_data[:, 0]; MJD = JD - 2400000.5
