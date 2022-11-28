@@ -8,6 +8,8 @@ The _time_correction_ function permits to download the correction tables (from [
 
 * For the GPS convertion, the last row provides the latest $\Delta t$ conversion to be used for active satellites (such as the ones in the context of the assignment). The last row is then selected and the $\Delta t$ obtained. Note that this time difference is the TAI-UTC, this can be converted to GPS time knowning that the TAI is always ahead by 19 s with respect to GPS.
 
+Note that a CSV reader function was also added to read the input data, however this is not the main subject of this repository and will not be expanded upon.
+
 # Inputs
 The type of time conversion is specified by either passing type='GPS' or type='UT1' to the function. An input file in CSV format with the first column being the fractional julian date form of the epoch of the orbiting satellite is also given (for the UT1 conversions).
 
