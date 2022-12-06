@@ -33,7 +33,7 @@ def time_correction(input_file, type='UT1'):
         with open('./UT1.txt', "r") as text_file:
             fin = text_file.readlines()
             jd_fin = [float(fin[i][7:14]) for i in range(0, len(fin)-1)]  # Not so efficient, investigate something different
-            delta = [float(fin[jd_fin.index(MJD_floored[i])][58:67]) for i in range(0, len(MJD))]
+            delta = [float(fin[jd_fin.index(MJD_floored[i])][58:68]) for i in range(0, len(MJD))]
         ## Implement the time conversion here ##
     elif type == 'GPS':
         if 'GPS.txt' in entries:
